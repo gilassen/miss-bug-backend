@@ -18,32 +18,33 @@ const __dirname = dirname(__filename)
 const app = express()
 const PORT = process.env.PORT || 3030
 
-const allowedOrigins = [
-  'http://localhost:5173',
-  process.env.CLIENT_URL,
-]
-
-app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-  })
-)
+// CORS
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    process.env.CLIENT_URL
+  ],
+  credentials: true
+}))
 
 app.use(express.json())
 app.use(cookieParser())
 app.use(loggerMiddleware)
 
+// API routes
 app.use('/api/bug', bugRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/auth', authRoutes)
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'public')))
+  const publicPath = path.join(__dirname, 'public')
+  app.use(express.static(publicPath))
 
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'))
+    res.sendFile(path.join(publicPath, 'index.html'))
   })
 }
 
-app.listen(PORT, () => console.log('Server ready at port', PORT))
+app.listen(PORT, () => {
+  console.log('Server running on port', PORT)
+})

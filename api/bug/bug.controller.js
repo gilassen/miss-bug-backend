@@ -124,7 +124,6 @@ export async function addBug(req, res) {
     const bugToSave = req.body
     const loggedinUser = req.loggedinUser 
 
-    // ✅ ADDED: Input validation
     if (!bugToSave.title || bugToSave.title.length < 3 || bugToSave.title.length > 100) {
       return res.status(400).json({ err: 'Title is required and must be between 3 and 100 characters' })
     }

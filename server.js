@@ -18,7 +18,6 @@ const __dirname = dirname(__filename)
 const app = express()
 const PORT = process.env.PORT || 3030
 
-// CORS
 app.use(cors({
   origin: [
     'http://localhost:5173',
@@ -31,17 +30,16 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(loggerMiddleware)
 
-// API routes
 app.use('/api/bug', bugRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/auth', authRoutes)
 
 if (process.env.NODE_ENV === 'production') {
-  const publicPath = path.join(__dirname, 'public')
-  app.use(express.static(publicPath))
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(publicPath, 'index.html'))
+  app.use(express.static(path.join(__dirname, 'public')))
+
+  app.get(/^\/(?!api).*/, (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
   })
 }
 

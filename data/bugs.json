@@ -1,0 +1,137 @@
+[
+    {
+        "_id": "XTSWUk",
+        "title": "Login button not working",
+        "description": "Clicking login does nothing",
+        "severity": 2,
+        "labels": [
+            "frontend",
+            "auth"
+        ],
+        "createdAt": 1762864769857,
+        "creator": {
+            "_id": "p5AwZp",
+            "fullname": "gil"
+        }
+    },
+    {
+        "_id": "Ab12Cd",
+        "title": "Signup form validation missing",
+        "description": "Form allows empty password field",
+        "severity": 3,
+        "labels": [
+            "frontend",
+            "validation"
+        ],
+        "createdAt": 1762865800000,
+        "creator": {
+            "_id": "p5AwZp",
+            "fullname": "gil"
+        }
+    },
+    {
+        "_id": "Ef34Gh",
+        "title": "Server crashes on large payload",
+        "description": "POST /api/bug with long description causes crash",
+        "severity": 5,
+        "labels": [
+            "backend",
+            "performance"
+        ],
+        "createdAt": 1762866800000,
+        "creator": {
+            "_id": "jra7BA",
+            "fullname": "gil1"
+        }
+    },
+    {
+        "_id": "Ij56Kl",
+        "title": "Broken link in footer",
+        "description": "The 'Contact Us' link redirects to 404 page",
+        "severity": 1,
+        "labels": [
+            "frontend",
+            "ui"
+        ],
+        "createdAt": 1762867800000,
+        "creator": {
+            "_id": "p5AwZp",
+            "fullname": "gil"
+        }
+    },
+    {
+        "_id": "Qr90St",
+        "title": "Profile image upload fails",
+        "description": "Error 500 returned when uploading PNG images",
+        "severity": 3,
+        "labels": [
+            "backend",
+            "upload"
+        ],
+        "createdAt": 1762869800000,
+        "creator": {
+            "_id": "DJSKp0",
+            "fullname": "muki muki"
+        }
+    },
+    {
+        "_id": "Uv12Wx",
+        "title": "Navbar not responsive",
+        "description": "Navigation bar overlaps logo on small screens",
+        "severity": 2,
+        "labels": [
+            "frontend",
+            "ui"
+        ],
+        "createdAt": 1762870800000,
+        "creator": {
+            "_id": "jra7BA",
+            "fullname": "gil1"
+        }
+    },
+    {
+        "_id": "Yz34Aa",
+        "title": "Incorrect date format",
+        "description": "Dates displayed as MM/DD/YYYY instead of DD/MM/YYYY",
+        "severity": 1,
+        "labels": [
+            "frontend",
+            "i18n"
+        ],
+        "createdAt": 1762871800000,
+        "creator": {
+            "_id": "p5AwZp",
+            "fullname": "gil"
+        }
+    },
+    {
+        "_id": "Bb56Cc",
+        "title": "Search function returns duplicates",
+        "description": "Duplicate bugs displayed when searching 'login'",
+        "severity": 2,
+        "labels": [
+            "frontend",
+            "search"
+        ],
+        "createdAt": 1762872800000,
+        "creator": {
+            "_id": "p5AwZp",
+            "fullname": "gil"
+        }
+    },
+    {
+        "_id": "Dd78Ee",
+        "title": "Email notifications not sent",
+        "description": "New bug assignments do not trigger email alert",
+        "severity": 4,
+        "labels": [
+            "backend",
+            "notifications"
+        ],
+        "createdAt": 1762873800000,
+        "creator": {
+            "_id": "DJSKp0",
+            "fullname": "muki muki"
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "p5AwZp",
+    "fullname": "gil",
+    "username": "gil",
+    "password": "fsddg",
+    "score": 2,
+    "isAdmin": false
+  },
+  {
+    "_id": "DJSKp0",
+    "username": "muki",
+    "fullname": "muki muki",
+    "password": "$2b$10$kSEdVXiUOqkcql1yR1RQpOs/lqHOvrvLQX/KhuL/dyMWPkBUCea8K",
+    "score": 0,
+    "isAdmin": true
+  },
+  {
+    "_id": "jra7BA",
+    "fullname": "gil1",
+    "username": "gil1",
+    "password": "$2b$10$QLneCMNzv2fTBUlVtlOM7urRWKOA2Z9LAbavv6JuJlAbKWbxJFKOi",
+    "score": 0,
+    "isAdmin": false
+  }
+]
